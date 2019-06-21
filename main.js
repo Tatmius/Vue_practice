@@ -19,6 +19,12 @@ var app = new Vue({
 			backgroundColor: 'lightgray',	
 		},
 		radius:50,
+		ok: true,
+		list1:[
+			{id:1, name:'slime', hp:100},
+			{id:2, name:'goblin',hp:200},
+			{id:3, name:'dragon',hp:500},
+		],
     	},
 	methods:{
 		handleClick:function(event){

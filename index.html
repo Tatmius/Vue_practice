@@ -31,10 +31,14 @@
 	    <p v-bind:class="classObject">Text</p>
 	    <p v-bind:style="styleObject">Text</p>
 
-	    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
-	    	<circle cx="100" cy="75" v-bind:r="radius" fill="lightpink/">
-	    </svg>
-	    <input type="range" min="0" max="100" v-model="radius">
+	    <div v-if="ok">v-if conditional branching</div>
+	    <div v-show="ok">v-show conditional branching</div>
+	    <ul>
+	    	<li v-for="item in list1" v-bind:key="item.id" v-bind:class="{tuyoi:item.hp>300}">
+		ID.{{item.id}} {{item.name}} HP.{{item.hp}}
+		<span v-if="item.hp>300">strong!</span>
+		</li>
+	    </ul>
 
         </div>
         <script    src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
