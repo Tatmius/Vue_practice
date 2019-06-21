@@ -19,6 +19,7 @@ var app = new Vue({
 			backgroundColor: 'lightgray',	
 		},
 		radius:50,
+
     	},
 	methods:{
 		handleClick:function(event){
