@@ -41,11 +41,12 @@
 	    </ul>
 
 	    <input v-model="name">
-	    <button v-on:click="doAdd">Add monster</button>
+		<button v-on:click="doAdd">Add monster</button>
 	    <ul>
-		    <li v-for="item in list" v-bind:key="item.id">
-			    ID.{{item.id}}{{item.name}} HP.{{item.hp}}
-		    </li>
+		    <li v-for="item in list1" v-bind:key="item.id">
+			    ID.{{item.id}} {{item.name}} HP.{{item.hp}}
+				<buttom v-on:click="doRemove(index)">delete monster</buttom>
+			</li>
 	   </ul>
 
         </div>

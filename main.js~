@@ -19,6 +19,13 @@ var app = new Vue({
 			backgroundColor: 'lightgray',	
 		},
 		radius:50,
+		ok: true,
+		name:"kimaira",
+		list1:[
+			{id:1, name:'slime', hp:100},
+			{id:2, name:'goblin',hp:200},
+			{id:3, name:'dragon',hp:500},
+		],
     	},
 	methods:{
 		handleClick:function(event){
@@ -26,6 +33,17 @@ var app = new Vue({
 		},
 		increment: function(){
 			this.count+=1
+		},
+		doAdd:function(){
+			var max=this.list.reduce(function(a,b){
+				return a>b.id ? a:b.id
+			
+			},0)
+			this.list.push({
+				id:max+1,
+				name:this.name,
+				hp:500,
+			})
 		},
 	},
 	mounted:function(){
