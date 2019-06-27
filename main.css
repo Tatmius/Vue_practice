@@ -7,3 +7,13 @@
 .v-enter, .v-leave-to{
 	opacity: 2;
 }
+
+img {
+	opacity: 1;
+	t
+	ransition: opacity 4s;
+}
+
+img.hide { 
+	opacity: 0;
+}

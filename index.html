@@ -42,13 +42,17 @@
 
 	    <input v-model="name">
 		<button v-on:click="doAdd">Add monster</button>
-	    <ul>
-		    <li v-for="item in list1" v-bind:key="item.id">
-			    ID.{{item.id}} {{item.name}} HP.{{item.hp}}
-				<buttom v-on:click="doRemove(index)">delete monster</buttom>
-			</li>
-	   </ul>
+		
+		<a v-bind:href="url" v-pre>Hello {{message}}</a>
 
+		<img src="image.jpg" v-on:load="show=true" v-bind:class="{hide: !show}">
+
+		<textarea v-model="message1"></textarea>
+		<pre>{{message1}}</pre>
+
+		<label>
+			<input type="checkbox" v-model="val">{{val}}
+		</label>
         </div>
         <script    src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
         <script src="main.js"></script>

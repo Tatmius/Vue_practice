@@ -5,6 +5,7 @@ var app = new Vue({
 		message: {
 			value:'Default message',
 		},
+		message1:'This is message1',
 		list: ['apple','banana','melon'],
 		count:0,
 		num:1,
@@ -26,6 +27,7 @@ var app = new Vue({
 			{id:2, name:'goblin',hp:200},
 			{id:3, name:'dragon',hp:500},
 		],
+		val:true
     	},
 	methods:{
 		handleClick:function(event){
