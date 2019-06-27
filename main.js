@@ -27,7 +27,11 @@ var app = new Vue({
 			{id:2, name:'goblin',hp:200},
 			{id:3, name:'dragon',hp:500},
 		],
-		val:true
+		val:true,
+		val1:[],
+		val2:'',
+		val3:[],
+		preview:'',
     	},
 	methods:{
 		handleClick:function(event){
@@ -46,6 +50,12 @@ var app = new Vue({
 				name:this.name,
 				hp:500,
 			})
+		},
+		handleChange: function(event){
+			var file=event.target.files[]
+			if(file&&file.type.match(/^image\/(png|jped)$/)){
+				this.preview=window.URL.createObjectURL(file)
+			}
 		},
 	},
 	mounted:function(){

@@ -51,8 +51,37 @@
 		<pre>{{message1}}</pre>
 
 		<label>
-			<input type="checkbox" v-model="val">{{val}}
+			<input type="checkbox" v-model="val" true-value="yes" false-value="no">{{val}}
 		</label>
+
+		<label><input type="checkbox" v-model="val1" value="A">A</label>
+		<label><input type="checkbox" v-model="val1" value="B">B</label>
+		<label><input type="checkbox" v-model="val1" value="C">C</label>
+		<p>{{val1}}</p>
+
+		<label><input type="radio" value="a" v-model="val2">A</label>
+		<label><input type="radio" value="b" v-model="val2">B</label>
+		<label><input type="radio" value="c" v-model="val2">C</label>
+		<p>{{val2}}</p>
+
+		<select v-model="val2">
+			<option disabled="disabled">選択してください</option>
+			<option value="a">A</option>
+			<option value="b">B</option>
+			<option value="c">C</option>
+		</select>
+
+		
+		<select v-model="val3" multiple>
+			<option value="a">A</option>
+			<option value="b">B</option>
+			<option value="c">C</option>
+		</select>
+		<p>{{val3}}</p>
+
+		<input type="file" v-on:change="handleChange">
+		<div v-if="preview"><img v-bind:src="preview"></div>
+
         </div>
         <script    src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
         <script src="main.js"></script>
