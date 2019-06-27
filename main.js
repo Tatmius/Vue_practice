@@ -32,7 +32,8 @@ var app = new Vue({
 		val2:'',
 		val3:[],
 		preview:'',
-    	},
+	},
+		
 	methods:{
 		handleClick:function(event){
 			alert(event.target)
@@ -52,7 +53,7 @@ var app = new Vue({
 			})
 		},
 		handleChange: function(event){
-			var file=event.target.files[]
+			var file=event.target.files[0]
 			if(file&&file.type.match(/^image\/(png|jped)$/)){
 				this.preview=window.URL.createObjectURL(file)
 			}
@@ -60,7 +61,7 @@ var app = new Vue({
 	},
 	mounted:function(){
 		this.scroll=100
-		},
+	},
 
 
 })	
