@@ -31,7 +31,7 @@ var app = new Vue({
 		val1:[],
 		val2:'',
 		val3:[],
-		preview:'',
+		val4:50,
 	},
 		
 	methods:{
@@ -51,12 +51,6 @@ var app = new Vue({
 				name:this.name,
 				hp:500,
 			})
-		},
-		handleChange: function(event){
-			var file=event.target.files[0]
-			if(file&&file.type.match(/^image\/(png|jped)$/)){
-				this.preview=window.URL.createObjectURL(file)
-			}
 		},
 	},
 	mounted:function(){
