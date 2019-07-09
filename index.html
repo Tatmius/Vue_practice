@@ -45,7 +45,6 @@
 		
 		<a v-bind:href="url" v-pre>Hello {{message}}</a>
 
-		<img src="image.jpg" v-on:load="show=true" v-bind:class="{hide: !show}">
 
 		<textarea v-model="message1"></textarea>
 		<pre>{{message1}}</pre>
@@ -78,7 +77,7 @@
 			<option value="c">C</option>
 		</select>
 		<p>{{val3}}</p>
-
+		
 		<input type="range" v-model.number="val4">{{val4}}
         </div>
         <script    src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>

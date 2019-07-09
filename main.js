@@ -1,3 +1,6 @@
+var myComponent={
+	template: '<p>MyComponent</p>'
+	}
 
 var app = new Vue({
     el: '#app',
@@ -56,7 +59,18 @@ var app = new Vue({
 	mounted:function(){
 		this.scroll=100
 	},
-
-
+	computed:{
+		matched: function(){
+			return this.list.filter(function(el){
+				return el.price<= this.budget
+				},this)
+			},
+		limited: function(){
+			return this.matched.slice(0, this.limit)
+			},
+		},
+	components:{
+		'my-compnent':myComponent
+		}
 })	
 
